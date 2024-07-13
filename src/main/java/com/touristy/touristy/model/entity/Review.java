@@ -1,9 +1,6 @@
 package com.touristy.touristy.model.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.PrePersist;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
 import java.io.Serial;
@@ -14,6 +11,7 @@ public class Review implements java.io.Serializable {
     @Serial
     private static final long serialVersionUID = 16765455674L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String comment;
     @Column(nullable = false) @NotNull

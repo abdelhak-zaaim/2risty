@@ -14,6 +14,7 @@ public class TouristicPlace implements java.io.Serializable {
     @Serial
     private static final long serialVersionUID = 16457654674L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private String name;
     private String description;

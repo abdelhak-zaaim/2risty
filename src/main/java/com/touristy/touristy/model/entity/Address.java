@@ -1,9 +1,9 @@
 package com.touristy.touristy.model.entity;
 
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 
-import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import org.springframework.data.elasticsearch.annotations.Document;
 
@@ -15,9 +15,13 @@ public class Address implements java.io.Serializable {
     @Serial
     private static final long serialVersionUID = 1674674L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private String street;
+    @NotNull @Column(nullable = false)
     private String city;
+    @NotNull @Column(nullable = false)
     private String state;
+    @NotNull @Column(nullable = false)
     private String country;
 }
