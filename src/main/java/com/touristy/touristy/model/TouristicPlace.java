@@ -2,6 +2,7 @@ package com.touristy.touristy.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.ValueConverter;
 
 import java.io.Serial;
 import java.util.List;
@@ -16,12 +17,12 @@ public class TouristicPlace implements java.io.Serializable {
     private String description;
     private String location;
     private Category category;
+
     private List<String> images;
     private String video;
     private String latitude;
     private String longitude;
 
-    private Review reviews;
 
 
 }

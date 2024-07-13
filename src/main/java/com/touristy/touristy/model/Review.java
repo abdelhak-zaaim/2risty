@@ -4,6 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
 import java.io.Serial;
+import java.time.LocalDate;
 
 @Document(indexName = "reviews")
 public class Review implements java.io.Serializable {
@@ -13,6 +14,10 @@ public class Review implements java.io.Serializable {
    private String id;
     private String comment;
     private int stars;
+
+    private LocalDate date;
+
+    private String placeId;
 
 
 }
