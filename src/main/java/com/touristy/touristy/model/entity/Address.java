@@ -1,14 +1,16 @@
-package com.touristy.touristy.model;
+package com.touristy.touristy.model.entity;
 
 
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Entity;
+
+import jakarta.persistence.Id;
+import lombok.Data;
 import org.springframework.data.elasticsearch.annotations.Document;
 
 import java.io.Serial;
 
-@Document(
-        indexName = "addresses"
-)
+@Entity
+@Data
 public class Address implements java.io.Serializable {
     @Serial
     private static final long serialVersionUID = 1674674L;

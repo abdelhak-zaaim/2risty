@@ -1,10 +1,12 @@
-package com.touristy.touristy.model;
+package com.touristy.touristy.model.entity;
 
+import com.touristy.touristy.converters.ListImagesConverter;
+import jakarta.persistence.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
-import org.springframework.data.elasticsearch.annotations.ValueConverter;
 
 import java.io.Serial;
+import java.time.LocalDate;
 import java.util.List;
 
 @Document(indexName = "touristic_places")
@@ -16,13 +18,33 @@ public class TouristicPlace implements java.io.Serializable {
     private String name;
     private String description;
     private String location;
+
+    @ManyToOne
     private Category category;
 
+    @Convert(converter = ListImagesConverter.class)
     private List<String> images;
+
     private String video;
     private String latitude;
     private String longitude;
 
+    private LocalDate createdAt;
+    private LocalDate updatedAt;
+
+    @ManyToMany
+    private List<Contact> contacts;
+
+    @PrePersist
+    public void prePersist() {
+        this.createdAt = LocalDate.now();
+        this.updatedAt = LocalDate.now();
+    }
+
+    @PreUpdate
+    public void preUpdate() {
+        this.updatedAt = LocalDate.now();
+    }
 
 
 }
