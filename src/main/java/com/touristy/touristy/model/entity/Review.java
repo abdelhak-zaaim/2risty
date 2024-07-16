@@ -14,7 +14,8 @@ public class Review implements java.io.Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String comment;
-    @Column(nullable = false) @NotNull
+    @Column(nullable = false)
+    @NotNull
     private int stars;
 
     private LocalDate date;
