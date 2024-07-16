@@ -2,7 +2,6 @@ package com.touristy.touristy.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.data.elasticsearch.annotations.Document;
 
 import java.io.Serial;
 
