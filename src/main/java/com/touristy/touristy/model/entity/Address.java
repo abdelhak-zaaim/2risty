@@ -6,6 +6,8 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 import java.io.Serial;
+import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Data
@@ -25,4 +27,19 @@ public class Address implements java.io.Serializable {
     @NotNull
     @Column(nullable = false)
     private String country;
+
+    private LocalDate createdAt;
+    private LocalDate updatedAt;
+
+
+    @PrePersist
+    public void prePersist() {
+        this.createdAt = LocalDate.now();
+        this.updatedAt = LocalDate.now();
+    }
+
+    @PreUpdate
+    public void preUpdate() {
+        this.updatedAt = LocalDate.now();
+    }
 }
