@@ -42,10 +42,7 @@ public class TouristicPlace implements java.io.Serializable {
         this.updatedAt = LocalDate.now();
     }
 
-    @PreUpdate
-    public void preUpdate() {
-        this.updatedAt = LocalDate.now();
-    }
+
 
 
 }
