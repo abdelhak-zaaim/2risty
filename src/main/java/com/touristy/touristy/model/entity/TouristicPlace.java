@@ -48,6 +48,4 @@ public class TouristicPlace implements java.io.Serializable {
     public void preUpdate() {
         this.updatedAt = ZonedDateTime.now(ZoneId.systemDefault());
     }
-
-
 }
