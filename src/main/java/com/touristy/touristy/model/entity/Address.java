@@ -7,6 +7,8 @@ import lombok.Data;
 
 import java.io.Serial;
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.List;
 
 @Entity
@@ -28,18 +30,18 @@ public class Address implements java.io.Serializable {
     @Column(nullable = false)
     private String country;
 
-    private LocalDate createdAt;
-    private LocalDate updatedAt;
+    private ZonedDateTime createdAt;
+    private ZonedDateTime updatedAt;
 
 
     @PrePersist
     public void prePersist() {
-        this.createdAt = LocalDate.now();
-        this.updatedAt = LocalDate.now();
+        this.createdAt = ZonedDateTime.now(ZoneId.systemDefault());
+        this.updatedAt = ZonedDateTime.now(ZoneId.systemDefault());
     }
 
     @PreUpdate
     public void preUpdate() {
-        this.updatedAt = LocalDate.now();
+        this.updatedAt = ZonedDateTime.now(ZoneId.systemDefault());
     }
 }
