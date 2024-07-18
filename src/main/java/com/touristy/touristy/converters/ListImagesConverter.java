@@ -7,12 +7,12 @@ import java.util.List;
 public class ListImagesConverter implements AttributeConverter<List<String>, String> {
     @Override
     public String convertToDatabaseColumn(List<String> attribute) {
-        // List<String> to String
-        String images = "";
+
+        StringBuilder images = new StringBuilder();
         for (String image : attribute) {
-            images += image + ",";
+            images.append(image).append(",");
         }
-        return images;
+        return images.toString();
     }
 
     @Override
