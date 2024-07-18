@@ -5,6 +5,8 @@ import jakarta.validation.constraints.NotNull;
 
 import java.io.Serial;
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 
 @Entity
 public class Review implements java.io.Serializable {
@@ -18,10 +20,10 @@ public class Review implements java.io.Serializable {
     @NotNull
     private int stars;
 
-    private LocalDate date;
+    private ZonedDateTime date;
 
     @PrePersist
     public void prePersist() {
-        this.date = LocalDate.now();
+        this.date = ZonedDateTime.now(ZoneId.systemDefault());
     }
 }
