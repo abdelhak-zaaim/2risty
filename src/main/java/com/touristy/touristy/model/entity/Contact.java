@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.io.Serial;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 
 @Entity
 @Data
@@ -20,4 +22,19 @@ public class Contact implements java.io.Serializable {
     @Column(nullable = false)
     private String email;
     private String phone;
+
+    private ZonedDateTime createdAt;
+    private ZonedDateTime updatedAt;
+
+
+    @PrePersist
+    public void prePersist() {
+        this.createdAt = ZonedDateTime.now(ZoneId.systemDefault());
+        this.updatedAt = ZonedDateTime.now(ZoneId.systemDefault());
+    }
+
+    @PreUpdate
+    public void preUpdate() {
+        this.updatedAt = ZonedDateTime.now(ZoneId.systemDefault());
+    }
 }
