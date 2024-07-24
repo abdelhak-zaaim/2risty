@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
 import java.io.Serial;
-import java.time.LocalDate;
+
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.List;
