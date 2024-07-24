@@ -3,7 +3,6 @@ package com.touristy.touristy.model.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-
 import java.io.Serial;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
