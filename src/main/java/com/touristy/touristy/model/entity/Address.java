@@ -6,10 +6,10 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 import java.io.Serial;
-import java.time.LocalDate;
+
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import java.util.List;
+
 
 @Entity
 @Data
