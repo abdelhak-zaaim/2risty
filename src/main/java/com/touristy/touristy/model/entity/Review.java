@@ -10,7 +10,7 @@ import java.time.ZonedDateTime;
 @Entity
 public class Review implements java.io.Serializable {
     @Serial
-    private static final long serialVersionUID = 16765455674L;
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
