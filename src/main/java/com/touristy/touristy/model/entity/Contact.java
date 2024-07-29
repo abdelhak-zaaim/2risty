@@ -11,7 +11,7 @@ import java.time.ZonedDateTime;
 @Data
 public class Contact implements java.io.Serializable {
     @Serial
-    private static final long serialVersionUID = 164574674L;
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
