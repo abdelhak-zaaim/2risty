@@ -14,7 +14,7 @@ import java.util.List;
 @Document(indexName = "touristic_places")
 public class TouristicPlace implements java.io.Serializable {
     @Serial
-    private static final long serialVersionUID = 16457654674L;
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
