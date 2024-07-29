@@ -2,11 +2,8 @@ package com.touristy.touristy.converters;
 
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
-import org.hibernate.boot.model.naming.IllegalIdentifierException;
 
 import java.util.List;
-
-import static org.yaml.snakeyaml.nodes.Tag.STR;
 
 @Converter
 public class ListImagesConverter implements AttributeConverter<List<String>, String> {
