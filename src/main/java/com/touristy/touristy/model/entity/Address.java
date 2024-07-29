@@ -12,7 +12,7 @@ import java.time.ZonedDateTime;
 @Data
 public class Address implements java.io.Serializable {
     @Serial
-    private static final long serialVersionUID = 1674674L;
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
