@@ -7,6 +7,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
 
 import java.io.Serial;
 
+import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.List;
@@ -32,20 +33,20 @@ public class TouristicPlace implements java.io.Serializable {
     private String latitude;
     private String longitude;
 
-    private ZonedDateTime createdAt;
-    private ZonedDateTime updatedAt;
+    private Instant createdAt;
+    private Instant updatedAt;
 
     @ManyToMany
     private List<Contact> contacts;
 
     @PrePersist
     public void prePersist() {
-        this.createdAt = ZonedDateTime.now(ZoneId.systemDefault());
-        this.updatedAt = ZonedDateTime.now(ZoneId.systemDefault());
+        this.createdAt = Instant.now();
+        this.updatedAt = Instant.now();
     }
 
     @PreUpdate
     public void preUpdate() {
-        this.updatedAt = ZonedDateTime.now(ZoneId.systemDefault());
+        this.updatedAt = Instant.now();
     }
 }
