@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import java.io.Serial;
+import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
@@ -27,18 +28,18 @@ public class Address implements java.io.Serializable {
     @Column(nullable = false)
     private String country;
 
-    private ZonedDateTime createdAt;
-    private ZonedDateTime updatedAt;
+    private Instant createdAt;
+    private Instant updatedAt;
 
 
     @PrePersist
     public void prePersist() {
-        this.createdAt = ZonedDateTime.now(ZoneId.systemDefault());
-        this.updatedAt = ZonedDateTime.now(ZoneId.systemDefault());
+        this.createdAt = Instant.now();
+        this.updatedAt = Instant.now();
     }
 
     @PreUpdate
     public void preUpdate() {
-        this.updatedAt = ZonedDateTime.now(ZoneId.systemDefault());
+        this.updatedAt = Instant.now();
     }
 }
