@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
 import java.io.Serial;
+import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
@@ -19,10 +20,10 @@ public class Review implements java.io.Serializable {
     @NotNull
     private int stars;
 
-    private ZonedDateTime date;
+    private Instant date;
 
     @PrePersist
     public void prePersist() {
-        this.date = ZonedDateTime.now(ZoneId.systemDefault());
+        this.date = Instant.now();
     }
 }
