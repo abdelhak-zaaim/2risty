@@ -1,8 +1,11 @@
 package com.touristy.touristy.service;
 
 
+import com.touristy.touristy.model.entity.Address;
 import com.touristy.touristy.repository.AddressRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class AddressService {
@@ -12,4 +15,8 @@ public class AddressService {
         this.addressRepository = addressRepository;
     }
 
+
+    public Optional<Address> findAddressById(String id){
+        return addressRepository.findById(id);
+    }
 }
