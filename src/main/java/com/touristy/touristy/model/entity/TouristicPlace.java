@@ -8,8 +8,6 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import java.io.Serial;
 
 import java.time.Instant;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
 import java.util.List;
 
 @Document(indexName = "touristic_places")
