@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TouristyApplication {
 
     public static void main(String[] args) {
+        //start the application
         SpringApplication.run(TouristyApplication.class, args);
     }
 
