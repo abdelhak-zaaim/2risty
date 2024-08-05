@@ -23,4 +23,8 @@ public class AddressService {
     public void deleteAddressById(String id){
         addressRepository.deleteById(id);
     }
+
+    public Address updateAddress(Address address){
+        return addressRepository.save(address);
+    }
 }
