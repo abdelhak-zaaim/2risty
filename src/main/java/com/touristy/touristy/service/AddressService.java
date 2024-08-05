@@ -19,4 +19,8 @@ public class AddressService {
     public Optional<Address> findAddressById(String id){
         return addressRepository.findById(id);
     }
+
+    public void deleteAddressById(String id){
+        addressRepository.deleteById(id);
+    }
 }
