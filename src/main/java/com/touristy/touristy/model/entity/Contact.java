@@ -27,7 +27,6 @@ public class Contact implements java.io.Serializable {
     private Instant createdAt;
     private Instant updatedAt;
 
-
     @PrePersist
     public void prePersist() {
         this.createdAt = Instant.now();
