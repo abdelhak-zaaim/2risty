@@ -9,7 +9,4 @@ import java.io.Serializable;
  * DTO for {@link com.touristy.touristy.model.entity.Category}
  */
 public record CategoryDto(String id, @NotNull String name, String description, String image) implements Serializable {
-    public void print(){
-        System.out.println(name());
-    }
 }
