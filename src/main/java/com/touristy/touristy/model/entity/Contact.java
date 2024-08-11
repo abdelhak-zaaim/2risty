@@ -1,15 +1,18 @@
 package com.touristy.touristy.model.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
+import org.hibernate.proxy.HibernateProxy;
 
 import java.io.Serial;
 import java.time.Instant;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+import java.util.Objects;
 
 @Entity
-@Data
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 public class Contact implements java.io.Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -36,5 +39,21 @@ public class Contact implements java.io.Serializable {
     @PreUpdate
     public void preUpdate() {
         this.updatedAt = Instant.now();
+    }
+
+    @Override
+    public final boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null) return false;
+        Class<?> oEffectiveClass = object instanceof HibernateProxy ? ((HibernateProxy) object).getHibernateLazyInitializer().getPersistentClass() : object.getClass();
+        Class<?> thisEffectiveClass = this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass() : this.getClass();
+        if (thisEffectiveClass != oEffectiveClass) return false;
+        Contact contact = (Contact) object;
+        return getId() != null && Objects.equals(getId(), contact.getId());
+    }
+
+    @Override
+    public final int hashCode() {
+        return this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass().hashCode() : getClass().hashCode();
     }
 }
