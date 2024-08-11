@@ -8,11 +8,5 @@ import java.io.Serializable;
 /**
  * DTO for {@link com.touristy.touristy.model.entity.Category}
  */
-@Value
-public class CategoryDto implements Serializable {
-    String id;
-    @NotNull
-    String name;
-    String description;
-    String image;
+public record CategoryDto(String id, @NotNull String name, String description, String image) implements Serializable {
 }
