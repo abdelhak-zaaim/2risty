@@ -1,6 +1,7 @@
 package com.touristy.touristy.model.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.Constraint;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import org.hibernate.proxy.HibernateProxy;
@@ -10,6 +11,9 @@ import java.time.Instant;
 import java.util.Objects;
 
 @Entity
+@Table(name = "Address", uniqueConstraints = {
+        @UniqueConstraint(name = "uc_address_id", columnNames = {"id"}),
+})
 @Getter
 @Setter
 @ToString
