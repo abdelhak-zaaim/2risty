@@ -9,6 +9,9 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
 @Entity
+@Table(name = "Review", indexes = {
+        @Index(name = "idx_review_id", columnList = "id")
+})
 public class Review implements java.io.Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
