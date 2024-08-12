@@ -10,4 +10,8 @@ public class ReviewService {
     public ReviewService(ReviewRepository reviewRepository) {
         this.reviewRepository = reviewRepository;
     }
+
+    public void deleteReviewById(Long id){
+       reviewRepository.deleteById(id);
+    }
 }
