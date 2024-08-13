@@ -12,6 +12,9 @@ import java.util.Objects;
 @Getter
 @Setter
 @Entity
+@Table(name = "Category", indexes = {
+        @Index(name = "idx_category_id", columnList = "id")
+})
 @ToString
 @RequiredArgsConstructor
 
