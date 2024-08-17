@@ -9,9 +9,6 @@ import java.time.Instant;
 import java.util.Objects;
 
 @Entity
-@Table(name = "Contact", indexes = {
-        @Index(name = "idx_contact_id", columnList = "id")
-})
 @Getter
 @Setter
 @ToString
