@@ -15,15 +15,15 @@ public class AddressService {
         this.addressRepository = addressRepository;
     }
 
-    public Optional<Address> findAddressById(String id){
+    public Optional<Address> findAddressById(String id) {
         return addressRepository.findById(id);
     }
 
-    public void deleteAddressById(String id){
+    public void deleteAddressById(String id) {
         addressRepository.deleteById(id);
     }
 
-    public Address updateAddress(Address address){
+    public Address updateAddress(Address address) {
         return addressRepository.save(address);
     }
 }
