@@ -15,7 +15,6 @@ public class AddressService {
         this.addressRepository = addressRepository;
     }
 
-
     public Optional<Address> findAddressById(String id){
         return addressRepository.findById(id);
     }
