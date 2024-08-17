@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import org.hibernate.proxy.HibernateProxy;
-
 import java.io.Serial;
 import java.time.Instant;
 import java.util.Objects;
