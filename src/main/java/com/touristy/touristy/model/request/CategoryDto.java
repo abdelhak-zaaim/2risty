@@ -1,7 +1,6 @@
 package com.touristy.touristy.model.request;
 
 import jakarta.validation.constraints.NotNull;
-import lombok.Value;
 
 import java.io.Serializable;
 
