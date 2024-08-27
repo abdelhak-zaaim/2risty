@@ -12,6 +12,7 @@ import java.io.Serial;
 import java.time.Instant;
 import java.util.Objects;
 
+
 @Entity
 @Table(name = "Address", uniqueConstraints = {
         @UniqueConstraint(name = "uc_address_id", columnNames = {"id"}),
