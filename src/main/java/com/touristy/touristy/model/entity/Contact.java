@@ -47,16 +47,7 @@ public class Contact implements java.io.Serializable {
         this.updatedAt = Instant.now();
     }
 
-    @Override
-    public  final boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null) return false;
-        Class<?> oEffectiveClass = object instanceof HibernateProxy ? ((HibernateProxy) object).getHibernateLazyInitializer().getPersistentClass() : object.getClass();
-        Class<?> thisEffectiveClass = this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass() : this.getClass();
-        if (thisEffectiveClass != oEffectiveClass) return false;
-        Contact contact = (Contact) object;
-        return getId() != null && Objects.equals(getId(), contact.getId());
-    }
+
 
     @Override
     public final int hashCode() {
