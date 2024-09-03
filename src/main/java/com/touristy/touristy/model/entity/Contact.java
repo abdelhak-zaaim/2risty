@@ -12,9 +12,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 @Entity
-@Table(name = "Contact", indexes = {
-        @Index(name = "idx_contact_id", columnList = "id")
-})
+
 @Getter
 @Setter
 @ToString
@@ -51,7 +49,7 @@ public class Contact implements java.io.Serializable {
     public  final boolean equals(Object object) {
         if (this == object) return true;
         if (object == null) return false;
-        Class<?> oEffectiveClass = object instanceof HibernateProxy ? ((HibernateProxy) object).getHibernateLazyInitializer().getPersistentClass() : object.getClass();
+        Class<?> oEffectiveClass = object instanceof HibernateProxy  ? ((HibernateProxy) object).getHibernateLazyInitializer().getPersistentClass() : object.getClass();
         Class<?> thisEffectiveClass = this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass() : this.getClass();
         if (thisEffectiveClass != oEffectiveClass) return false;
         Contact contact = (Contact) object;
