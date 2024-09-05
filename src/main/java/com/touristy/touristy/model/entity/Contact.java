@@ -21,7 +21,7 @@ import java.util.Objects;
 @RequiredArgsConstructor
 public class Contact implements java.io.Serializable {
     @Serial
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1768L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
