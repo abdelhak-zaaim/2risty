@@ -22,7 +22,7 @@ import java.util.Objects;
 @RequiredArgsConstructor
 public class Address implements java.io.Serializable {
     @Serial
-    private static final long serialVersionUID = 67777771L;
+    private static final long serialVersionUID = 677771L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
