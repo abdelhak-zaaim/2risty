@@ -7,4 +7,5 @@ public interface CategoryRepository extends JpaRepository<Category, String> {
     public Category findCategoryById(String id);
     void deleteCategoryById(String id);
     boolean existsCategoryById(String id);
+    int countCategoryById(String id);
 }
