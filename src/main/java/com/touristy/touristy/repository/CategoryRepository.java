@@ -9,3 +9,4 @@ public interface CategoryRepository extends JpaRepository<Category, String> {
     boolean existsCategoryById(String id);
     int countCategoryById(String id);
 }
+
