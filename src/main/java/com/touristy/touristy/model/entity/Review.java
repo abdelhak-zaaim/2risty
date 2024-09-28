@@ -1,14 +1,13 @@
 package com.touristy.touristy.model.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-import lombok.Locked;
+import jakarta.validation.constraints.*;
+import org.apache.catalina.User;
 
 import java.io.Serial;
 import java.time.Instant;
 
 @Entity
-
 public class Review implements java.io.Serializable {
     @Serial
     private static final long serialVersionUID = 12_23_42L;
@@ -17,18 +16,28 @@ public class Review implements java.io.Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Comment cannot be blank")
+    @Size(max = 1000, message = "Comment must not exceed 1000 characters")
     private String comment;
 
     @Column(nullable = false)
     @NotNull
+    @Min(value = 1, message = "Stars must be at least 1")
+    @Max(value = 5, message = "Stars must not exceed 5")
     private int stars;
 
+    @Column(nullable = false)
     private Instant date;
 
+
+
+
     @PrePersist
-    @Locked.Read
     public void prePersist() {
         this.date = Instant.now();
     }
 
+    // Getters and setters
+
+    // toString, equals, and hashCode methods
 }
