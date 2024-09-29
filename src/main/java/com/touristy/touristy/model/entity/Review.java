@@ -5,6 +5,7 @@ import jakarta.validation.constraints.*;
 import org.apache.catalina.User;
 
 import java.io.Serial;
+import java.lang.reflect.Type;
 import java.time.Instant;
 
 @Entity
