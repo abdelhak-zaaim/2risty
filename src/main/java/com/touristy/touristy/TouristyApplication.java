@@ -10,6 +10,7 @@ public class TouristyApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(TouristyApplication.class, args);
+        
     }
 
 }
