@@ -17,7 +17,6 @@ public class Review implements java.io.Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Comment cannot be blank")
     @Size(max = 1000, message = "Comment must not exceed 1000 characters")
     private String comment;
 
