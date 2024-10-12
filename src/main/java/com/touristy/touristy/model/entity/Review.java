@@ -1,11 +1,12 @@
 package com.touristy.touristy.model.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
-import org.apache.catalina.User;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 import java.io.Serial;
-import java.lang.reflect.Type;
 import java.time.Instant;
 
 @Entity
@@ -28,9 +29,6 @@ public class Review implements java.io.Serializable {
 
     @Column(nullable = false)
     private Instant date;
-
-
-
 
     @PrePersist
     public void prePersist() {
