@@ -37,7 +37,4 @@ public class Review implements java.io.Serializable {
         this.date = Instant.now();
     }
 
-    // Getters and setters
-
-    // toString, equals, and hashCode methods
 }
