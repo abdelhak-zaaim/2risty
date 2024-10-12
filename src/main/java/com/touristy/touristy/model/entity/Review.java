@@ -23,7 +23,7 @@ public class Review implements java.io.Serializable {
     @Column(nullable = false)
     @NotNull
     @Min(value = 1, message = "Stars must be at least 1")
-    @Max(value = 5, message = "Stars must not exceed 5")
+    @Max(value = 5)
     private int stars;
 
     @Column(nullable = false)
