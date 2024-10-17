@@ -12,7 +12,7 @@ import java.util.List;
 @Document(indexName = "touristic_places")
 public class TouristicPlace implements java.io.Serializable {
     @Serial
-    private static final long serialVersionUID = 176576L;
+    private static final long serialVersionUID = 17666576L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
