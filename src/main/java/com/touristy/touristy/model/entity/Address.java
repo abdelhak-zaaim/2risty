@@ -20,7 +20,7 @@ import java.util.Objects;
 @RequiredArgsConstructor
 public class Address implements java.io.Serializable {
     @Serial
-    private static final long serialVersionUID = 78778071L;
+    private static final long serialVersionUID = 787__780791L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
