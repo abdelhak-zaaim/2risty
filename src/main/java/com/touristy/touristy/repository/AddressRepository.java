@@ -6,4 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface AddressRepository extends JpaRepository<Address, String> {
     Address findByCity(String city);
     Address findByStreet(String street);
+    Address findByState(String state);
+    Address findByCountry(String country);
 }
