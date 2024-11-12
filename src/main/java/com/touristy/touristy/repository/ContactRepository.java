@@ -7,4 +7,5 @@ public interface ContactRepository extends JpaRepository<Contact, String> {
     void deleteById(String id);
     Contact findByEmail(String email);
     Contact findByPhone(String phone);
+    void deleteByEmail(String email);
 }
