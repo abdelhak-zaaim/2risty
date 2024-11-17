@@ -12,7 +12,7 @@ import java.time.Instant;
 @Entity
 public class Review implements java.io.Serializable {
     @Serial
-    private static final long serialVersionUID = 25_276_42;
+    private static final long serialVersionUID = 25_42;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
