@@ -20,7 +20,7 @@ import java.util.Objects;
 
 public class Category implements java.io.Serializable {
     @Serial
-    private static final long serialVersionUID = 1486_863L;
+    private static final long serialVersionUID = 1486_8_63L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
